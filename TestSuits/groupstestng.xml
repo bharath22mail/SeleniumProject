@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+
+<suite name="Suite">
+	<test name="PerSonal and Home">
+		<groups>
+			<run>
+				<include name="smoke" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.learning.selenium.TestNGProject.day4" />
+			<class name="com.learning.selenium.TestNGProject.day3" />
+		</classes>
+	</test>
+	<test name="Car and Gadgets">
+		<groups>
+			<run>
+				<include name="Regression" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.learning.selenium.TestNGProject.day2" />
+			<class name="com.learning.selenium.TestNGProject.day1" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

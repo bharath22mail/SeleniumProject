@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+
+<suite name="Suite">
+	<test name="PerSonal and Home">
+		<classes>
+			<class name="com.learning.selenium.TestNGProject.day4">
+				<methods>
+					<include name="clearPersonalLoan" />
+				</methods>
+			</class>
+			<class name="com.learning.selenium.TestNGProject.day3">
+				<methods>
+					<exclude name="clear.*" />
+					<exclude name="getHomeLoan" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Car and Gadgets">
+		<classes>
+			<class name="com.learning.selenium.TestNGProject.day2" />
+			<class name="com.learning.selenium.TestNGProject.day1" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

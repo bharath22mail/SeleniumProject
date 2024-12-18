@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+
+<suite name="Suite" >
+
+	<listeners>
+		<listener class-name="com.learning.selenium.TestNGListeners.TestNGListenersDemo" />
+	</listeners>
+	<test name="PerSonal and Home">
+		<classes>
+			<class name="com.learning.selenium.TestNGProject.day4" />
+			<class name="com.learning.selenium.TestNGProject.day3" />
+		</classes>
+	</test>
+	<test name="Car and Gadgets">
+		<classes>
+			<class name="com.learning.selenium.TestNGProject.day2" />
+			<class name="com.learning.selenium.TestNGProject.day1" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
