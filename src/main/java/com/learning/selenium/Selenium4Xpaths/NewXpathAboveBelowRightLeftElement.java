@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.openqa.selenium.support.locators.RelativeLocator.*;
 
-public class NewXpzthAboveBelowRightLeftElement {
+public class NewXpathAboveBelowRightLeftElement {
 
 	public static void main(String[] args) {
 
