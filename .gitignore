@@ -3,10 +3,12 @@
 
 # Ignore Java class files
 *.class
+*.html
 
 # Ignore temporary files
 target/
 test-output/
+reports/
 
 # Ignore IDE configuration files
 .idea/
@@ -19,3 +21,6 @@ Thumbs.db
 # Added later
 .classpath
 settings/
+reports/
+.settings/org.eclipse.jdt.core.prefs
+*.prefs
