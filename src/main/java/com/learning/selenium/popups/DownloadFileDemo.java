@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class WindowBasedPopup {
+public class DownloadFileDemo {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 
@@ -21,9 +21,16 @@ public class WindowBasedPopup {
 		// the file (.au3 format)
 		// 5th Goto the location where filed saved, right click on it run the file to
 		// generate .exe file
-		
 		String projectPath = System.getProperty("user.dir");
 		String downLoadPath = projectPath+"\\DownloadPath";
+		
+		File file = new File(downLoadPath + "Rent.docx");
+		if (file.exists()) {
+			System.out.println("file found");
+			file.delete();
+			System.out.println("file deleted also");
+		}
+		
 		
 		HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
 		chromePrefs.put("profile.default_content_settings.popups",0);
@@ -41,11 +48,6 @@ public class WindowBasedPopup {
 		Thread.sleep(3000);
 		driver.findElement(By.cssSelector("span#processTaskTextBtn")).click();
 		Thread.sleep(8000);
-		File file = new File(downLoadPath + "Rent.docx");
-		if (file.exists()) {
-			System.out.println("file found");
-			file.delete();
-			System.out.println("file deleted also");
-		}
+		
 	}
 }
