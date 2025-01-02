@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class WindowBasedPopupWithDynamicText {
+public class AutoITWindowBasedPopupWithDynamicFile {
 
 	public static void main(String[] args) {
 
@@ -60,9 +60,9 @@ public class WindowBasedPopupWithDynamicText {
 		//****Save the above 4 lines in .au3 formaat
 		//****compile the above saved file to get .exe filr
 		
-        String dynamicText = projectPath + "\\Resources\\AutoIt\\Rent1.pdf";
+        String dynamicFile = projectPath + "\\Resources\\AutoIt\\Rent1.pdf";
         String autoItExecutable = projectPath + "\\Resources\\AutoIt\\fileUpload.exe"; // Example dynamic text
-        Runtime.getRuntime().exec(new String[]{autoItExecutable, dynamicText});
+        Runtime.getRuntime().exec(new String[]{autoItExecutable, dynamicFile});
         
 		//Runtime.getRuntime().exec(projectPath + "\\Resources\\AutoIt" + "\\fileUpload.exe");
 		
