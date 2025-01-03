@@ -31,7 +31,19 @@ public class DownloadFileDemo {
 			System.out.println("file deleted also");
 		}
 		
-		
+		/*
+		 * Key: "profile.default_content_settings.popups" This preference controls
+		 * whether popups are allowed in the Chrome browser.
+		 * 
+		 * Value: 0 Setting the value to 0 disables all popups in the browser.
+		 * 
+		 * 
+		 * When to Use It When automating scenarios involving: File downloads. Pages or
+		 * websites that frequently trigger popups. Testing in a headless mode where
+		 * popups cannot be interacted with. If you don't disable popups, your script
+		 * may fail or hang when a popup unexpectedly appears.
+		 */			
+			
 		HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
 		chromePrefs.put("profile.default_content_settings.popups",0);
 		chromePrefs.put("download.default_directory", downLoadPath);
@@ -44,10 +56,13 @@ public class DownloadFileDemo {
 		driver.manage().window().maximize();
 		driver.findElement(By.xpath("//span[contains(text(),'Select PDF file')]")).click();
 		Thread.sleep(3000);
-		Runtime.getRuntime().exec(projectPath + "\\Resources\\AutoIt" + "\\fileUpload.exe");
-		Thread.sleep(3000);
+		  String dynamicFile = projectPath + "\\Resources\\AutoIt\\Rent.pdf";
+	        String autoItExecutable = projectPath + "\\Resources\\AutoIt\\fileUpload.exe"; // Example dynamic text
+	        Runtime.getRuntime().exec(new String[]{autoItExecutable, dynamicFile});
+	       
+		Thread.sleep(10000);
 		driver.findElement(By.cssSelector("span#processTaskTextBtn")).click();
-		Thread.sleep(8000);
-		
+		Thread.sleep(10000);
+		driver.close();;
 	}
 }

@@ -60,7 +60,7 @@ public class AutoITWindowBasedPopupWithDynamicFile {
 		//****Save the above 4 lines in .au3 formaat
 		//****compile the above saved file to get .exe filr
 		
-        String dynamicFile = projectPath + "\\Resources\\AutoIt\\Rent1.pdf";
+        String dynamicFile = projectPath + "\\Resources\\AutoIt\\Rent.pdf";
         String autoItExecutable = projectPath + "\\Resources\\AutoIt\\fileUpload.exe"; // Example dynamic text
         Runtime.getRuntime().exec(new String[]{autoItExecutable, dynamicFile});
         
